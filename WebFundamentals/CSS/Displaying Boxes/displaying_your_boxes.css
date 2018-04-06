@@ -1,0 +1,31 @@
+ *{
+text-align: center !important;
+margin: auto !important;
+} 
+body{
+    background-color: moccasin;
+}
+header{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:36pt;
+    font-weight: bold;
+    display:inline;
+    background-color:moccasin;
+    padding: 40px 40px 0px 40px;
+}
+table{
+   text-align:center;
+   background-color: moccasin; 
+}
+.blue{
+    margin:20px;
+    padding:20px;
+    background-color: blue;
+    border: 5px solid black;
+}
+.red{
+    margin:20px;
+    padding:20px;
+    background-color: red;
+    border: 5px solid black;
+}

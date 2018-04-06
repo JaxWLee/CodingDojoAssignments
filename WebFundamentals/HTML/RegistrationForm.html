@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>My Registration Form</title>
+        <style>
+            .content{
+                max-width: 500px;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <h1>My Registration Form </h1>
+            <table>
+                <thead>
+                    <th>
+                        
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="first_name">First Name</label>
+                            <input type="text" id="first_name" name="first_name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="last_name">Last Name</label>
+                            <input type="text" id="last_name" name="last_name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password">Password</label>
+                            <input type="text" id="password" name="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password_confirm">Password Confirm</label>
+                            <input type="text" id="password_confirm" name="password_confirm">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="male">Male</label>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="female">Female</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="other">Other</label>
+                            <input type="radio" id="other" name="gender" value="other">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <h4>A Short Description of Yourself</h4>
+                            <textarea name="A Short Description of Yourself" height="500" width="800" ></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Favortie Language
+                        </td>
+                        <td>
+                            <select name="Favorite Language">
+                                <option value="Javascript">Javascript</option>
+                                <option value="Python">Python</option>
+                                <option value="html">html</option>
+                                <option value="Git">Git</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="submit" value="Submit">
+        </div>
+        
+    </body>
+</html>
