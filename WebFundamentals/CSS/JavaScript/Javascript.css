@@ -1,69 +1,83 @@
-*{
+ /* *{
     display: block;
-}
-#wrapper{
-    background-color:blue;
-    height: auto;
-    width: 960px;
-    display:inline-block;
-    padding:10px;
-    border-radius:2%;
-}
-#sidebar{
-    background-color: lightblue;
-    height: auto;
-    width: 200px;
-    border-radius:2%;
-    margin:5px;
-    padding:10px;
-    display:block;
-}
-#content {
-    background-color: black;
-    color:lightblue;
-    display: inline-block;
-    height:auto;
-    width:700px;
-    vertical-align: top;
-    border-radius:2%;
-    padding:5px;
-    font-size:12pt;
-}
-#list{
-    display:inline-block;
-    color: blue;
-}
-#wrapper header{
-    background-color: red;
+    font-family: 'Times New Roman', Times, serif;
+}  */
+h1{
+    background-color: rgb(215,38,56);
+    color:rgb(191,215,234);
     height: 60px;
     width: auto;
     font-size:42pt;
-    border-radius:3%;
+    border-radius:3px;
     margin:5px;
     padding:5px;
 }
-#content header{
-    background-color: black;
-    font-size:36pt;
-    height: 60px;
+h2{
+    background-color: rgb(12,24,33);
+    font-size:28pt;
+    height: 20px;
     width: 650px;
-    vertical-align: top;
-    display:block;
 }
-#content ul{
-    display:block;
-    color:lightblue;
+ .margin_list{
+    margin:10px;
 }
-#wrapper footer{
-    font-size: 18pt;
-    height: 30px;
-    width:960px;
-    display:block;
-    background-color: grey;
-    border-radius:3%;
-    padding:5px;
-    display: inline-block;
+#wrapper{
+    background-color:rgb(18,53,91);
+    height: auto;
+    width: 1300px;
+    padding:10px;
+    border-radius:2%;
+    list-style-type: disc;
+    list-style-position: inside;
 }
-#wrapper footer a{
+#sidebar{
+    background-color:rgb(8,126,139);
+    list-style-type: disc;
+    list-style-position: inside;
+    height: auto;
+    width: 200px;
+    border-radius:2%;
+    margin:5px 20px 5px 5px;
+    padding:10px;
     display:inline-block;
+    text-align: left;
+}
+#content {
+    background-color: rgb(12,24,33);
+    color:rgb(191,215,234);
+    display: inline-block;
+    height:auto;
+    width:1000px;
+    vertical-align: top;
+    border-radius:2%;
+    padding:10px;
+    font-size:12pt;
+    margin-top:5px;
+}
+ #list{
+    display:inline-block;
+    color: blue;
+}
+#content a{
+    display:inline;
+}
+ #wrapper footer{
+    font-size: 12pt;
+    height: 30px;
+    width: 1245px;
+    background-color: rgb(92,102,114);
+    border-radius: 16px;
+    padding:10px;
+    margin:10px;
+    color:rgb(191,215,234);
+    padding-top:20px;
+} 
+#sidebar ul{
+    text-align: left;
+    margin: 2px;
+    padding:5px;
+}
+#sidebar ul li{
+    padding-left:10px;
+    margin:0px;
 }
