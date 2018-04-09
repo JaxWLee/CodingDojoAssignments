@@ -1,0 +1,133 @@
+.profile{
+    border:8px gray solid;
+    margin:10px 10px 10px 30px;
+    display:inline;
+}
+#lamode p{
+    margin-bottom:100px;
+}
+#family_contracts p{
+    margin-bottom:65px;
+}
+#fiveeleven p{
+    margin-bottom:30px;
+}
+#about{
+    height:265px;
+    width: 500px;
+    display:inline-block;
+    padding:0px;
+    margin-top: 0px;
+    margin-left:10px;
+    text-align: left;
+    background: -webkit-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Safari 5.1- 6.0 */
+    background: -o-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Opera 11.6-12.0 */
+    background: -moz-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Firefox 3.6-15 */
+    background: linear-gradient(to bottom right, #fefefe, #dbcbda); /* Standard syntax */
+}
+#content{
+    height: auto;
+    width: 1030px;;
+    margin:5px;
+    padding:5px 5px 5px 10px;
+    display: inline-block;
+}
+#wrapper {
+    width:1045px;
+    height:auto;
+    display:inline-block;
+    background: -webkit-radial-gradient(#6f5964, #1f0f13); /* Safari 5.1- 6.0 */
+    background: -o-radial-gradient(#6f5964, #1f0f13); /* Opera 11.6-12.0 */
+    background: -moz-radial-gradient(#6f5964, #1f0f13); /* Firefox 3.6-15 */
+    background: radial-gradient(#6f5964, #1f0f13); /* Standard syntax */
+}
+#tech{
+    height:30px;
+    font-size:14pt;
+    font-family: Arial, Helvetica, sans-serif;
+    background: -webkit-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Safari 5.1- 6.0 */
+    background: -o-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Opera 11.6-12.0 */
+    background: -moz-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Firefox 3.6-15 */
+    background: linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Standard syntax */
+    color:white;
+}
+#wrapper #head{
+    background-color:white;
+    height:75px;
+    width: auto;
+    display:inline-block;
+    padding-right: 99px;
+}
+#wrapper h1{
+    display:inline-block;
+    height: auto;
+    width: 600px;
+    margin: 20px;
+    font-family:"Comic Sans",sans-serif;
+}
+#wrapper h2{
+    display: inline;
+    text-align: right;
+    height: auto;
+    width:300px;
+    margin:5px 5px 15px 5px;
+    font-size:14pt;
+}
+#about p1{
+    height:20px;
+    width:495px;
+    /* background-color: gray; */
+    display: block;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left:5px;
+    margin-bottom:15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    background: -webkit-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Safari 5.1- 6.0 */
+    background: -o-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Opera 11.6-12.0 */
+    background: -moz-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Firefox 3.6-15 */
+    background: linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Standard syntax */
+    color:white;
+}
+#about p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    display:block;
+    margin:10px;
+    background: -webkit-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Safari 5.1- 6.0 */
+    background: -o-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Opera 11.6-12.0 */
+    background: -moz-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Firefox 3.6-15 */
+    background: linear-gradient(to bottom right, #fefefe, #dbcbda); /* Standard syntax */
+}
+#content table{
+    margin:15px;
+    padding-right:5px;
+    display: inline-block;
+    height: auto;
+    width:300px;
+    background: -webkit-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Safari 5.1- 6.0 */
+    background: -o-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Opera 11.6-12.0 */
+    background: -moz-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Firefox 3.6-15 */
+    background: linear-gradient(to bottom right, #fefefe, #dbcbda); /* Standard syntax */  
+}
+#content table th{
+    height:30px;
+    background: -webkit-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Safari 5.1- 6.0 */
+    background: -o-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Opera 11.6-12.0 */
+    background: -moz-linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Firefox 3.6-15 */
+    background: linear-gradient(#bdbdbf, #888694, #bdbdbf); /* Standard syntax */
+    color:white;
+}
+#content table #button{
+    height: 10px;
+    width:15px;
+	color:white;
+	border:solid 1px black;
+	border-radius: 3px;
+	padding:5px;
+	margin: 10px 100px;
+    font-weight: 900;
+    text-align: center;
+}
+
