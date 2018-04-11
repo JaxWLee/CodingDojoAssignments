@@ -1,0 +1,145 @@
+*{
+    margin:0px;
+    padding: 0px;
+    font-family: monospace;
+    color:white;
+}
+#blue{
+    color:rgb(63,172,176);
+}
+h4{
+    margin-bottom:5px;
+}
+header{
+    margin:0px 10px;
+    height: 70px;
+    width: auto;
+    background-color:rgb(63,172,176);
+}
+header img{
+    margin: 10px 0px 0px 10px;
+    background-color: blue;
+}
+header h1{
+    display:inline-block;
+    vertical-align: top;
+    margin-top:20px;
+}
+header ul{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 25px;
+    margin-left:60px;
+}
+header ul li{
+    display: inline-block;
+    margin:10px;
+}
+header ul li a{
+    display:inline-block;
+    color:white;
+    text-align: right;
+}
+.wrapper{
+    display: inline-block;
+    height: auto;
+    width:970px;
+    background-color: gray;
+    padding-right:20px;
+}
+.content{
+    margin:10px;
+    display:inline-block;
+    height:auto;
+    width:970px;
+    background-color: rgb(250,229,150);
+}
+.content .sidebar{
+    display:inline-block;
+    vertical-align: top;
+    height:auto;
+    width:200px;
+    margin:20px;
+    background-color: rgb(23,63,67);
+    padding:10px;
+}
+.content .sidebar h3{
+    margin:10px 0px;
+}
+.content .sidebar p{
+    margin-left:10px;
+}
+.content .body{
+    display: inline-block;
+    height: auto;
+    width: 700px;
+    margin-top:10px;
+    
+}
+.content .body .top{
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+    width:700px;
+}
+.content .body .top ul{
+    display: inline-block;
+    vertical-align: top;
+}
+.content .body .top ul li{
+    display: inline-block;
+    height:150px;
+    width:150px;
+    margin:10px;
+    background-color:  rgb(23,63,67);
+    vertical-align: top;
+    padding:10px;
+}
+.content .body .top ul #big{
+    display: inline-block;
+}
+.content .body .top ul #big li{
+    margin-left:60px;
+}
+.content .body .mid{
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+    width:700px;
+}
+.content .body .mid ul{
+    display: inline-block;
+    vertical-align: top;
+}
+.content .body .mid ul li{
+    display: inline-block;
+    height: 100px;
+    width: 300px;
+    background-color:  rgb(23,63,67);
+    margin:10px;
+    padding:10px; 
+}
+.content .body .mid ul #second{
+    display: inline-block;
+    margin-left:0px;
+}
+.content .body .bottom{
+    display: inline-block;
+    height:100px;
+    width:660px;
+    background-color:  rgb(23,63,67);
+    margin:30px 0px 10px 0px;
+    padding:10px;    
+}
+.footer{
+    text-align: center;
+    height: 30px;
+    width: auto;
+    background-color:rgb(63,172,176);
+    margin: 10px;
+    padding: 10px;
+}
+.footer p{
+    color:black;
+    padding-top:5px;
+}
