@@ -1,0 +1,83 @@
+*{
+    margin:0px;
+    padding:0px;
+    /* border:0px; */
+    text-align: center;
+}
+button{
+    padding:3px;
+    margin:2px;
+}
+.wrapper{
+    height: auto;
+    width:970px;
+}
+.red{
+    background-color: red;
+}
+.click {
+    display: block;
+    border-bottom:5px solid black;   
+}
+.hide{
+    border-bottom:5px solid black;
+}
+.toggle{
+    border-bottom:5px solid black;
+}
+.toggle img{
+    display:none;
+    height: 100px;
+}
+.slidedown{
+    border-bottom:5px solid black;
+}
+.slidedown p{
+    width: 100%;
+    display: none;  
+}
+.slideup{
+    border-bottom:5px solid black;
+}
+.slideup p{
+    width:100%;
+}
+.slidetoggle{
+    border-bottom:5px solid black;
+}
+.slidetoggle p{
+    width:100%;
+}
+.fadein{
+    border-bottom:5px solid black;
+}
+.fadein p{
+    display: none;
+}
+.fadeout{
+    border-bottom:5px solid black;
+}
+.addclass{
+    border-bottom:5px solid black;
+}
+.before{
+    border-bottom: 5px solid black;
+}
+.after{
+    border-bottom:5px solid black;
+}
+.append{
+    border-bottom:5px solid black;
+}
+.html{
+    border-bottom:5px solid black; 
+}
+.attr{
+    border-bottom:5px solid black;
+}
+.val{
+    border-bottom:5px solid black;
+}
+.text{
+    border-bottom:5px solid black;
+}

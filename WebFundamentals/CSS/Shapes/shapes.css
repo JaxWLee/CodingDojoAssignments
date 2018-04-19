@@ -1,0 +1,26 @@
+#square{
+    height:200px;
+    width:200px;
+    margin:30px;
+    background-color: blue;
+}
+#circle{
+    height:200px;
+    width:200px;
+    border-radius: 100%;
+    margin:30px;
+    background-color: blue;
+}
+#triangle{
+    height:200px;
+    width:200px;
+
+    background-color: blue;
+}
+#pacman{
+    height:200px;
+    width:200px;
+    border-radius: 100%;
+    margin:30px;
+    background-color: blue;
+}

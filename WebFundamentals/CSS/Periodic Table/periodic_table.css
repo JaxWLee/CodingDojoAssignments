@@ -1,0 +1,62 @@
+.wrapper{
+    height: auto;
+    width: 970px;
+    background-color: yellow;
+    display: inline-block;
+}
+.header p{
+    height: 50px;
+    width:50px;
+    outline: 2px dashed red;
+    margin: 10px;
+    display: inline-block;
+}
+.header .seven{
+    list-style-type: none;
+    outline: 2px dashed red;
+    height: auto;
+    width: 800px;
+    display: inline-block;
+    margin:5px 5px 0px 5px;
+    padding-top:18px;
+}
+.header .seven li{
+    display: inline-block;
+    margin:0 50px 30px 50px;
+    outline:2px dashed red;
+}
+.header .eight{
+    margin:5px;
+    list-style-type: none;
+    outline:2px dashed red;
+    height: auto;
+    width:30px;
+    vertical-align: top;
+    text-align: left;
+}
+.header .eight li{
+    display: inline-block;
+    width:20px;
+    height: auto;
+    text-align: left;
+    margin:50px 0px;
+    outline: 2px dashed red;
+}
+.table ul{
+    list-style-type: none;
+    display: inline-block;
+    height:auto;
+    width:auto; 
+}
+.table li{
+    height:50px;
+    width:50px;
+    margin:2px;
+    background-color:blue;
+}
+.table li h4{
+    margin:0px;
+}
+.table li p1{
+    margin:0px;
+}

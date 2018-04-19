@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="jQueryFunctions.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.click button').click(function(){
+                alert("I've been clicked");
+            });
+            $('.hide button').click(function(){
+                $('.hide h1').hide();
+            });
+            $('.hide .show').click(function(){
+                $('.hide h1').show();
+            });
+            $('.toggle button').click(function(){
+                $('.toggle img').toggle(1000);
+            });
+            $('.slidedown button').click(function(){
+                $('.slidedown p').slideDown();
+            });
+            $('.slideup button').click(function(){
+                $('.slideup p').slideUp();
+            });
+            $('.slidetoggle button').click(function(){
+                $('.slidetoggle p').slideToggle();
+            });
+            $('.fadein button').click(function(){
+                $('.fadein p').fadeIn();
+            });
+            $('.fadeout button').click(function(){
+                $('.fadeout p').fadeOut();
+            })
+            $('.addclass button').click(function(){
+                $('.addclass p').addClass('red');
+            });
+            $('.before button').click(function(){
+                $('.before p').before('<p>YUP you forgot</p>');
+            });
+            $('.after button').click(function(){
+                $('.after p').after('<p> Oooh Its shiny!!</p>');
+            });
+            $('.append button').click(function(){
+                $('.append p').append('We meet again.');
+            });
+            $('.html button').click(function(){
+                $('.html p').html('<i>Aint it pretty</i>')
+            })
+            $('.attr button').click(function(){
+                var a = $('.toggle img').attr('src');
+                $('.attr p').text(a);
+            });
+
+            $('.text button').click(function(){
+                $('.text p').text('Now this is right');
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="click">
+            <h1>Click</h1>
+            <button>Click This Button!!</button>
+        </div>
+        <div class="hide">
+            <h1>Hide and Show</h1>
+            <button>Click to Hide</button>
+            <button class='show'>Click To Show</button>
+        </div>
+        <div class="toggle">
+            <h1>Togglin</h1>
+            <button>Click To Toggle</button>
+            <img src='https://buzzkeys.com/2016/08/20-funny-and-creative-stock-images-found-online.jpg' alt = 'image'/>
+        </div>
+        <div class="slidedown">
+            <h1>Slide Down</h1>
+            <button>Click to Slide Down</button>
+            <p class='red'>How Did You Find Me?</p>
+        </div>
+        <div class="slideup">
+            <h1>Slide Up</h1>
+            <button>Click To Slide Up</button>
+            <p class='red'>Where are you taking me?</p>
+        </div>
+        <div class="slidetoggle">
+            <h1>Slide Toggle</h1>
+            <button>Click To Slide Toggle</button>
+            <p class='red'>Really? We are just going back and forth?</p>
+        </div>
+        <div class="fadein">
+            <h1>Fade In</h1>
+            <button>Click To Fade In</button>
+            <p class='red'>BOOOOO I'm a ghost</p>
+        </div>
+        <div class="fadeout">
+            <h1>Fade Out</h1>
+            <button>Click To Fade Out</button>
+            <p class='red'>And now I disappear</p>
+        </div>
+        <div class="addclass">
+            <h1>Add Class</h1>
+            <button>Click To Add Class</button>
+            <p>Im a chameleon watch me match my surroundings</p>
+        </div>
+        <div class="before">
+            <h1>Before</h1>
+            <button>Click To see what Before does</button>
+            <p>Hmm I feel like I'm missing something I must have left it behind.</p>
+        </div>
+        <div class="after">
+            <h1>After</h1>
+            <button>Click To see what After does</button>
+            <p>Hmm I feel like I might find something ahead.</p>
+        </div>
+        <div class="append">
+            <h1>Append</h1>
+            <button>Click to Append</button>
+            <p>So....</p>
+        </div>
+        <div class="html">
+            <h1>HTML</h1>
+            <button>Click to see what HTML does</button>
+            <p>HTML is kinda like text but watch this....</p>
+        </div>
+        <div class="attr">
+            <h1>Attr</h1>
+            <button>Click to See what Attr does</button>
+            <p>Where did you find that photo?</p>
+        </div>
+        <div class="val">
+            <h1>Val</h1>
+            <button>Click to see what Val does</button>
+        </div>
+        <div class="text">
+            <h1>Text</h1>
+            <button>Click to see what Text does</button>
+            <p>Waiiit this isnt right.</p>
+        </div>
+        <div class="data">
+            <h1>Data</h1>
+            <button>Click to see what data does</button>
+        </div>
+    </div><!--End of Wrapper-->
+</body>
+</html>
