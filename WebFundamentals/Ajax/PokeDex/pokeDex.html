@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .wrapper{
+            width:970;
+            height: auto;
+        }
+        .sprites{
+            display: inline-block;
+            width:600px;
+            vertical-align:top;
+            margin:10px;
+            border:10px solid red;
+            border-radius:10%;
+            background-image: url('https://orig00.deviantart.net/4867/f/2014/355/0/2/pokemon_bw_bw2_mystery_gift_screen_background_by_phoenixoflight92-d8anydd.png');
+        }
+        .info{
+            display: inline-block;
+            width:300px;
+            height: auto;
+            margin:10px;
+            padding:5px;
+            position: fixed;
+            background-image:url('https://orig00.deviantart.net/4867/f/2014/355/0/2/pokemon_bw_bw2_mystery_gift_screen_background_by_phoenixoflight92-d8anydd.png');
+            border:10px solid red;
+            border-radius:3%;
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        "usestrict";
+        $(document).ready(function(){
+            for(var i=1; i<152; i++){
+                $('.sprites').append("<img id ="+i+" src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+i+".png'>")
+            };
+            $('img').click(function(){
+                i = $(this).attr('id');
+                $.get("https://pokeapi.co/api/v2/pokemon/"+i,function(pokemon){
+                    console.log(pokemon);
+                var sprite = pokemon.sprites.front_default;
+                var name = pokemon.name;
+                var height = pokemon.height;
+                var weight = pokemon.weight;
+                var type1;
+                var type2;
+                if (pokemon.types.length == 1){
+                    type1 = pokemon.types[0].type.name;
+                    type2 = null;
+                    $('.info p').html('<h1>'+name+'</h1> <img src="'+sprite+'"/><h4>Types</h4><ul><li>'+type1+'</li></ul><h4>Height</h4><p>'+height+'</p><h4>Weight</h4><p>'+weight+'</p>');
+                }
+                else{
+                    type1 = pokemon.types[0].type.name;
+                    type2 = pokemon.types[1].type.name;
+                    $('.info p').html('<h1>'+name+'</h1> <img src="'+sprite+'"/><h4>Types</h4><ul><li>'+type1+'</li><li>'+type2+'</li></ul><h4>Height</h4><p>'+height+'</p><h4>Weight</h4><p>'+weight+'</p>');
+                }
+                console.log(sprite,name,type1,type2,height,weight);
+                },"json");
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sprites"></div>
+        <div class="info">
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>

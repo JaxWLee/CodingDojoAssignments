@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css" media="screen">
+    .wrapper{
+        width:970px;
+        height: auto;
+        text-align: center;
+    }
+    .content ul{
+        list-style-type: none;
+        width:800px;
+        height: auto;
+    }
+    .content ul li img{
+        width:300px;
+        height: auto;
+    }
+    </style>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script>
+        "usestrict";
+        $(document).ready(function(){
+            $('.ninja0').hide();
+            $('.ninja1').hide();
+            $('.ninja2').hide();
+            $('.ninja3').hide();
+            $('.ninja4').hide();
+            $('img').click(function(){
+                    var data;
+                    data = $(this).attr("data-alt-src");
+                    if (data == 'cat0'){
+                        $('.cat0').hide();
+                        $('.ninja0').show();
+                    }
+                    else if (data == 'ninja0'){
+                        $('.ninja0').hide();
+                        $('.cat0').show();
+                    }
+                    if (data == 'cat1'){
+                        $('.cat1').hide();
+                        $('.ninja1').show();
+                    }
+                    else if (data == 'ninja1'){
+                        $('.ninja1').hide();
+                        $('.cat1').show();
+                    }
+                    if (data == 'cat2'){
+                        $('.cat2').hide();
+                        $('.ninja2').show();
+                    }
+                    else if (data == 'ninja2'){
+                        $('.ninja2').hide();
+                        $('.cat2').show();
+                    }
+                    if (data == 'cat3'){
+                        $('.cat3').hide();
+                        $('.ninja3').show();
+                    }
+                    else if (data == 'ninja3'){
+                        $('.ninja3').hide();
+                        $('.cat3').show();
+                    }
+                    if (data == 'cat4'){
+                        $('.cat4').hide();
+                        $('.ninja4').show();
+                    }
+                    else if (data == 'ninja4'){
+                        $('.ninja4').hide();
+                        $('.cat4').show();
+                    }
+                });
+            });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <ul>
+                <li><img class ="cat0" src="img/cat0.png" alt="cat" data-alt-src="cat0"/><img class="ninja0" src="img/ninja0.png" alt="nija" data-alt-src="ninja0"/></li>
+                <li><img class ="cat1" src="img/cat1.png" alt="cat" data-alt-src="cat1"/><img class="ninja1" src="img/ninja1.png" alt="nija" data-alt-src="ninja1"/></li>
+                <li><img class ="cat2" src="img/cat2.png" alt="cat" data-alt-src="cat2"/><img class="ninja2" src="img/ninja2.png" alt="nija" data-alt-src="ninja2"/></li>
+                <li><img class ="cat3" src="img/cat3.png" alt="cat" data-alt-src="cat3"/><img class="ninja3" src="img/ninja3.png" alt="nija" data-alt-src="ninja3"/></li>
+                <li><img class ="cat4" src="img/cat4.png" alt="cat" data-alt-src="cat4"/><img class="ninja4" src="img/ninja4.png" alt="nija" data-alt-src="ninja4"/></li>
+            </ul>
+        </div>
+    </div>  
+</body>
+</html>

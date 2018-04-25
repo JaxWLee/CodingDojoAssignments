@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .wrapper{
+            width:970px;
+            height: auto;
+        }
+        table{
+            border:5px solid black;
+            margin:10px;
+            width:950px;
+            height: auto;
+            text-align: center;
+        }
+        tbody{
+            margin:10px;
+        }
+        h1{
+            width:300px;
+            height: auto;
+            border-bottom:2px solid black;
+            margin:10px;
+        }
+        form{
+            width:300px;
+            height: auto;
+            margin:10px;
+            text-align: right;
+        }
+        br{
+            margin:10px;
+        }
+        .btn{
+            width:100px;
+            height: auto;
+            font-size:14pt;
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('form').children().css('margin','5px');
+            $('form').submit(function(){
+                var f; var l; var e; var c;
+                    f = $('.first_name').val();
+                    l = $('.last_name').val();
+                    e = $('.email').val();
+                    c = $('.contact').val();
+                    $('tbody').append('<tr> <td>'+f+'</td> <td>'+l+'</td> <td>'+e+'</td> <td>'+c+'</td> </tr>');
+                    $('tr').css('border-bottom','1px solid black');
+                    return false;
+                });
+            });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <table>
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Contact #</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table> 
+        <h1>Add User</h1>
+        <form action="process.php" method="post">
+            First Name:<input class='first_name' type="text"  value="First Name"><br>
+            Last Name:<input class='last_name' type="text" value="Last Name"><br>
+            Email Address:<input class='email' type="text" value="Email Address"><br>
+            Contact No.:<input class='contact' type="text" value="Phone Number"><br>
+            <br><br>
+            <input class="btn" type="submit" value="Add User">
+        </form>
+    </div>
+    
+</body>
+</html>

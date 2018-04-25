@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+        .wrapper{
+            width: 970px;
+            height: auto;
+        }
+        form{
+            width:460px;
+            height: auto;
+            margin:10px;
+            font-size: 28px;
+            text-align: right;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius:10px;
+            background-color: green;
+            display: inline-block;
+        }
+        textarea{
+            height: 200px;
+            width: 350px;
+            font-size: 16px;
+            border-radius:10px;
+        }
+        input{
+            font-size: 20px;
+            margin-right:15px;
+            border-radius:10px;
+            box-shadow: none;
+        }
+        table{
+            display: inline-block;
+            height: auto;
+            width:400px;
+            vertical-align: top;
+        }
+        .last{
+            margin-bottom:50px;
+        }
+        .Description input{
+            margin:10px 10px 10px 30px;
+            padding:5px;
+        }
+        .Description{
+            text-align: left;
+            margin-left:5px;
+        }
+        tr{
+            text-align: center;
+            width:300px;
+            height: 100px;
+            border:2px solid black;
+            display:block;
+            margin-bottom:10px;
+        }
+        td{
+            padding:10px;
+            display:block;
+        }
+        #td2{
+            display: none;
+        }
+        p{
+            text-align: left;
+            font-size: 16pt;
+            margin:2px;
+        }
+    </style>
+    <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script>
+        "usestrict";
+        $(document).ready(function(){
+            var f; var i = -1; var object=[];
+                    $('form').submit(function(){
+                    i++
+                     f = {
+                         first_name: $('.first').val(),
+                         last_name: $('.last').val(),
+                         description:$("#textarea").val(),
+                         value:i
+                     }
+                     object.push(f);
+                    
+                    $('tbody').append("<tr class='"+i+"'><td class='td1"+i+"'><h2>"+f.first_name+" "+f.last_name+"</h2></td> <td class='td1"+i+"'>Click for Descrition</td>");
+                    return false;
+                    });  
+            $(document).on('click','tr',function(){
+                var c = $(this).attr('class');
+                $('.'+c).html('<p>'+object[c].description+'</p>')
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="form" method="post">
+            First Name:<input class='first' type='text'><br>
+            Last Name:<input class="last" type='text'><br>
+            <div class='Description'>
+            Description:<br><textarea id='textarea' rows="4" columns="4"></textarea><br>
+            <input id="submit" type="submit" value="Add User">
+            </div>
+        </form>
+        <table>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div><!--End of Wrapper-->
+</body>
+</html>

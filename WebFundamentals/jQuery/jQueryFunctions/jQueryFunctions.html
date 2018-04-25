@@ -55,11 +55,38 @@
                 var a = $('.toggle img').attr('src');
                 $('.attr p').text(a);
             });
-
+            $('.val button').click(function(){
+                var x = $(".val input").val();
+                $('.val input').data('value','x');
+                $('.val p').text(x);
+                
+            });
             $('.text button').click(function(){
                 $('.text p').text('Now this is right');
             });
-        })
+            $('.data button').click(function(){
+                var value;
+                switch($('.data button').index(this)){
+                    case 0:
+                        value = $(".data").data("Name");
+                        break;
+                    case 1: 
+                        $(".data").data("Name","Turd Furguson");
+                        value = "Changed!";
+                        break;
+                    case 2:
+                        $(".data").data("Name","Christopher Walken");
+                        value = "Changed!";
+                        break;
+                    case 3:
+                        $(".data").data("Name","Me");
+                        value = "Changed!";
+                        break;
+                }; 
+                console.log(value)
+                $('span').text('' + value);
+                });
+            });
     </script>
 </head>
 <body>
@@ -136,6 +163,8 @@
         <div class="val">
             <h1>Val</h1>
             <button>Click to see what Val does</button>
+            <input type="text" value="Search">
+            <p>Search</p>
         </div>
         <div class="text">
             <h1>Text</h1>
@@ -145,6 +174,10 @@
         <div class="data">
             <h1>Data</h1>
             <button>Click to see what data does</button>
+            <button>Set "Name" to "Turd Furguson"</button>
+            <button>Set "Name" to "Christopher Walken"</button>
+            <button>Set "Name" to Me</button>
+            <p>This page was created by <span>Name</span>.</p>
         </div>
     </div><!--End of Wrapper-->
 </body>
