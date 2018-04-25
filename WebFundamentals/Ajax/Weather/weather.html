@@ -11,9 +11,12 @@
         $(document).ready(function(){
             $('form').submit(function(){
                 var city = $('.text').val();
-                var html_str="http://api.openweathermap.org/data/2.5/weather?q="+city+"&APPID={5e36cd3a276aef3b3daf817a11c79826}";
+                var html_str="http://api.openweathermap.org/data/2.5/weather?q="+city+"&APPID=5e36cd3a276aef3b3daf817a11c79826";
                 $.get(html_str,function(res){
                     console.log(res);
+                    
+                    var temp = Math.round(res.main.temp - 255.37);
+                    $('.weather').html('<h2>'+city+'</h2><p>Temperature: '+temp+'</p>');
                 },"json")    
                 return false;
             })
