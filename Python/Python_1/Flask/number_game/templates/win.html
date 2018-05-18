@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>You Won</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='main.css')}}">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Welcome to the Great Number Game</h1>
+        <h4>I'm thinking of a number between 0-100</h4>
+        <h4>Take a guess</h4>
+        <div class="win">
+            <p>{{r}} was the number</p>
+            <form action="/">
+                <input type="submit" value="Play Again">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

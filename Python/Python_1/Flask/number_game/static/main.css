@@ -1,0 +1,31 @@
+*{
+    text-align: center;
+}
+.wrapper{
+    width:960px;
+    height: auto;
+    text-align: center;
+}
+.other{
+    margin-left:300px;
+    text-align: center;
+    height: 400px;
+    width:400px;
+    background-color: red;
+    font-size: 38pt;
+    margin-bottom:20px;
+}
+.other p{
+    padding-top:100px;
+}
+.win{
+    text-align: center;
+    height: 400px;
+    width:400px;
+    background-color: green;
+    font-size: 30pt;
+    margin-left:300px;
+}
+.win p{
+    padding-top:100px;
+}
