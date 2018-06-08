@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Wall</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Coding Dojo Wall</h1>
+            <h4>Welcome {{ session['user_name'] }}!</h4>
+            <a href="/logoff">Log Off</a>
+        </div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif%}
+        {% endwith %}
+        <div class="wall">
+        <form class="post_message" action="/post" method="POST">
+            <input type="hidden" name = 'hidden' value = 'message'>
+            <h4>Post A Message</h4>
+            <textarea name="message" id="message" cols="130" rows="5"></textarea><br>
+            <input type="submit" value="submit">
+        </form>
+            {% for message in messages %}
+                <h3 class = 'messages'>{{ message['name'] }} {{ message['updated_at_date'] }} {{ message['updated_at_time'] }}</h3>
+                <fieldset class = 'messages'>
+                    <p class = 'messages'>{{ message['message'] }}</p>
+                </fieldset>
+                {% for comment in comments %}
+                    {% if comment['message_id'] == message['id'] %}
+                        <h5 class = 'comments'>{{ comment['name'] }} {{ comment['updated_at_date']}} {{ comment['updated_at_time'] }}</h5>
+                        <fieldset class = 'comments'>
+                            <p class = 'comment'>{{ comment['comment'] }}</p>
+                        </fieldset>
+                    {% endif %}
+                {% endfor %}
+                <form class="post_comment" action="/post" method="POST">
+                    <input type="hidden" name = 'hidden' value = 'comment'>
+                    <input type="hidden" name = 'identify' value = "{{ message['id'] }}">
+                    <h4>Post A Comment</h4>
+                    <textarea name="comment" id="comment" cols="100" rows="5"></textarea><br>
+                    <input type="submit" value="submit">
+                </form>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .wrapper{
+        width:970px;
+        background: #499bea; /* Old browsers */
+        background: -moz-linear-gradient(top, #499bea 0%, #207ce5 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #499bea 0%,#207ce5 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #499bea 0%,#207ce5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5',GradientType=0 ); /* IE6-9 */
+    }
+    .header{
+        background: #1e5799; /* Old browsers */
+        background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+    }
+    .header h1{
+        display: inline;
+        margin:5px;
+    }
+    .header h4{
+        display: inline;
+        margin-left: 400px;
+    }
+    .header a{
+        display: inline;
+        margin-left: 40px;
+    }
+    textarea{
+        resize: none;
+    }
+    .post_message{
+        margin:10px;
+    }
+    .messages{
+        margin:10px;
+    }
+    .comments, .post_comment{
+        margin-left:30px
+    }
+    .comment{
+        margin:10px;
+    }
+    fieldset{
+        background: #e6f0a3; /* Old browsers */
+        background: -moz-linear-gradient(top, #e6f0a3 0%, #d2e638 50%, #c3d825 51%, #dbf043 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=0 ); /* IE6-9 */
+    }
+    .flashes li{
+        background-color: red;
+        width: 400px;
+    }
+</style>    
+</html>

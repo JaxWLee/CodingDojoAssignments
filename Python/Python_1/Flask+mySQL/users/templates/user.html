@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>User {{dbquery[0]['id']}}</h1>
+    <ul>
+        <li>First Name: {{dbquery[0]['first_name']}}</li>
+        <li>Last Name: {{dbquery[0]['last_name']}}</li>
+        <li>Email: {{dbquery[0]['email']}}</li>
+    </ul>
+    <a href = "/users/{{dbquery[0]['id']}}/edit">Edit</a>
+    <a href = "/users/{{dbquery[0]['id']}}/destroy">Delete</a>
+</body>
+<style>
+    ul{
+        list-style-type: none;
+    }
+</style>
+</html>

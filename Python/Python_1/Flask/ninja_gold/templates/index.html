@@ -7,46 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="wrapper">
-        <h3>Your Gold: <input type="text" value={{gold}}></h3>
-        <div class="navigate">
-            <div class="farm">
-                <h2>Farm</h2>
-                <p>(Earns 10-20 gold)</p>
-                <form action="/process_money" method="POST">
-                    <input type="hidden" name="gold" value="farm">
-                    <input type="submit" value = "Find Gold">
-                </form>
-            </div>
-            <div class="cave">
-                <h2>Cave</h2>
-                <p>(Earns 5-10 gold)</p>
-                <form action="/process_money" method="POST">
-                    <input type="hidden" name="gold" value="cave">
-                    <input type="submit" value = "Find Gold">
-                </form>
-            </div>
-            <div class="house">
-                <h2>House</h2>
-                <p>(Earns 2-5 gold)</p>
-                <form action="/process_money" method="POST">
-                    <input type="hidden" name="gold" value="house">
-                    <input type="submit" value = "Find Gold">
-                </form>
-            </div>
-            <div class="casino">
-                <h2>Farm</h2>
-                <p>(Earns/takes 0-50 gold)</p>
-                <form action="/process_money" method="POST">
-                    <input type="hidden" name="gold" value="casino">
-                    <input type="submit" value = "Find Gold">
-                </form>
-            </div>
-        </div>
-        <div class="activity">
-            <textarea name="activity" id="" cols="50" rows="30">{{activity}}</textarea>
-        </div>
+    <h2>Your Gold: {{session["total_gold"]}}</h2>
+    <fieldset>
+        <legend>Farm</legend>
+        <h3>(Earns 10 - 20 gold)</h3>
+        <form action="/process_money" method="post">
+            <input type="hidden" name="building" value="farm" />
+            <input type="submit" value="Find Gold!"/>
+          </form>
+    </fieldset>
+    <fieldset>
+        <legend>Cave</legend>
+        <h3>(Earns 5 - 10 gold)</h3>
+        <form action="/process_money" method="post">
+            <input type="hidden" name="building" value="cave" />
+            <input type="submit" value="Find Gold!"/>
+          </form>
+    </fieldset>
+    <fieldset>
+        <legend>House</legend>
+        <h3>(Earns 2 - 5 gold)</h3>
+        <form action="/process_money" method="post">
+            <input type="hidden" name="building" value="house" />
+            <input type="submit" value="Find Gold!"/>
+          </form>
+    </fieldset>
+    <fieldset>
+        <legend>Casino</legend>
+        <h3>(Earns/Takes 0 - 50 gold)</h3>
+        <form action="/process_money" method="post">
+            <input type="hidden" name="building" value="casino" />
+            <input type="submit" value="Find Gold!"/>
+          </form>
+    </fieldset>
+    <div>
+        {% for act in session["activity"]%}
+            {% if act["won"] == True %}
+            <p style="color:green;">{{act["event"]}}</p>
+            {% else %}
+            <p style="color:red;">{{act["event"]}}</p>
+            {% endif %}
+        {% endfor %}
     </div>
-
 </body>
+<style>
+    fieldset{
+        display: inline-block;
+        width: 250px;
+    }
+</style>
 </html>

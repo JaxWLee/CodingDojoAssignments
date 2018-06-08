@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SUCCESS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif%}
+    {% endwith %}
+    {% if all_emails %}
+        <h2 class="email_head">Emails Entered:</h2>
+        <ul class="emails">
+        {% for email in all_emails %}
+            <li>{{email['id']}}:  {{email['email']}}   {{email['updated_at']}}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    
+    <form action="/remove" method = "POST">
+    Press to Remove Entry with ID equal to:<input type="number" name="remove_number" id="remove_all"><input type="submit" value="Remove" name="remove" id="remove_last">
+    </form>
+</body>
+<style>
+ul{
+    list-style-type: none;
+}
+.flashes li{
+    border: solid green 2px;
+    width: 300px;
+    padding:5px;
+    background-color: green;
+}
+.emails{
+    text-align: center;
+    margin-left:400px;
+}
+.emails li{
+    border: solid black 2px;
+    width:400px;
+    margin:5px;
+}
+.email_head{
+    margin-left:300px;
+}
+form{
+    text-align: center;
+}
+</style>
+</html>

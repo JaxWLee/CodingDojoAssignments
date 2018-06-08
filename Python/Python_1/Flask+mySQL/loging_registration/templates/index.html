@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login/Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif%}
+    {% endwith %}
+    <fieldset>
+        <legend>Registration</legend>
+        <form action="/register" method="POST">
+        <label for="first_name">First Name:<input type="text" name="first_name"></label>
+        <label for="last_name">Last Name:<input type="text" name="last_name"></label>
+        <label for="email">Email:<input type="text" name="email"></label>
+        <label for="password">Password:<input type="text" name="password"></label>
+        <label for="confirm_password">Confirm Password:<input type="text" name="confirm_password"></label>
+        <label><input type="submit" value="Register"></label>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Login</legend>
+        <form action="/login" method="POST">
+            <label for="email">Email:<input type="text" name="email"></label>
+            <label for="password">Password:<input type="text" name="password"></label>
+            <label><input type="submit" value="Login"></label>
+        </form>
+    </fieldset>
+</body>
+<style>
+    label{
+        display: block;
+        margin:5px;
+    }
+    input{
+        margin-left:5px;
+    }
+    fieldset{
+        width:400px;
+        display: inline-block;
+        height: 200px;
+        vertical-align: top;
+    }
+    ul{
+        list-style-type: none;
+    }
+    .flashes li{
+        background-color: red;
+        width: 400px;
+    }
+</style>
+</html>
