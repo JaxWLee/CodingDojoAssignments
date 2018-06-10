@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Random Word Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Random Word Attempt: {{number}}</h1>
+        <fieldset>
+            <h1>{{word}}</h1>
+        </fieldset>
+        <form action="/random_word/generate/" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Generate">
+        </form>
+        <form action="/random_word/clear/" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Clear">
+        </form>
+    </div>  
+</body>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .wrapper{
+        width:970px;
+        text-align: center;
+    }
+    fieldset{
+        width:400px;
+        margin:10px 10px 10px 270px;
+        height:30px;
+        padding:10px;
+    }
+    input{
+        border-radius: 6px;
+        padding:10px;
+        background-color: blue;
+        margin:10px;
+    }
+</style>
+</html>
