@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Session Words</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="wrapper">
+        <fieldset class='form'>
+            <h1>Add a new Word:</h1>
+            <form action="/session_words/process/" method = "POST">
+                {% csrf_token %}
+                <input style="margin:5px 5px 5px 15px;" type="text" name="word"><br>
+                Choose a Color:<br>
+                    <input name="color" type="radio" value="red">Red<br>
+                    <input name="color" type="radio" value="green">Green<br>
+                    <input name="color" type="radio" value="blue">Blue<br>
+                <input type="checkbox" name ='font'> Show in Big Fonts<br>
+                <input type="Submit" value="Submit">
+            </form>
+        </fieldset>
+        <fieldset class="right">
+            <table>
+                <thead>
+                    <th></th>
+                    <th> <form id = 'clear' action="/session_words/clear/">
+                        <input type="submit" value="Clear Session">
+                    </form></th>
+                </thead>
+                <tbody>
+                    {% for i in request.session.words %}
+                    <tr>
+                        {% if 'font' not in i %}
+                            <td style="margin:10px;"><p style="color:{{ i.color }};font-size: 12pt;">{{i.word}}</p></td>  
+                            <td style="text-align: center;"><p>{{i.time}}</p></td>
+                        {% else %}
+                            <td style="margin:10px;"><p style = "color:{{ i.color }};font-size: 18pt;">{{i.word}}</p></td>
+                            <td style="text-align: center;"><p>{{i.time}}</p></td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </fieldset>
+    </div>    
+</body>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .wrapper{
+        margin:10px;
+    }
+    input[type="text"] {
+    width: 200px;
+    height: 20px;
+    }
+    fieldset{
+        width:400px;
+        margin:10px;
+        display: inline-block;
+        vertical-align: top;
+        border: none;
+    }
+    form{
+        margin:10px;
+    }
+    #clear{
+        width:400px;
+        display: inline-block;
+    }
+    .right{
+        border-left:3px solid black;
+    }
+</style>
+</html>
