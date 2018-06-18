@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ninja Gold</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+   <h3>Your Gold: <input type="text" value="{{request.session.total_gold}}" readonly></h3>
+   <div class="game">
+        <fieldset>
+            <h2>Farm</h2>
+            <p>(Earns 10 - 20 gold)</p>
+            <form action="/ninja/process_money/" method="POST">
+                {%csrf_token%}
+                <input type="hidden" name="place" value="farm">
+                <input type="submit" value="Find Gold">
+            </form>
+        </fieldset>
+        <fieldset>
+            <h2>Cave</h2>
+            <p>(Earns 5 - 10 gold)</p>
+            <form action="/ninja/process_money/" method="POST">
+                {%csrf_token%}
+                <input type="hidden" name="place" value="cave">
+                <input type="submit" value="Find Gold">
+            </form>
+        </fieldset>
+        <fieldset>
+            <h2>House</h2>
+            <p>(Earns 2 - 5 gold)</p>
+            <form action="/ninja/process_money/" method="POST">
+                {%csrf_token%}
+                <input type="hidden" name="place" value="house">
+                <input type="submit" value="Find Gold">
+            </form>
+        </fieldset>
+        <fieldset>
+            <h2>Casino</h2>
+            <p>(Earns/Loses 0 - 50 gold)</p>
+            <form action="/ninja/process_money/" method="POST">
+                {%csrf_token%}
+                <input type="hidden" name="place" value="casino">
+                <input type="submit" value="Find Gold">
+            </form>
+        </fieldset>
+   </div>
+    <div class="scroll">
+        <fieldset class="activities">
+                {% for act in request.session.activities %}
+                    {%if act.won == True%}
+                        <p style="color:green;">{{act.event}} </p>
+                    {%else%}
+                        <p style="color:red;"> {{act.event}} </p>
+                    {%endif%}
+                {%endfor%}
+        </fieldset>
+    </div>
+</body>
+<style>
+    fieldset{
+        width:200px;
+        margin:5px;
+        display: inline-block;
+        text-align: center;
+    }
+    textarea{
+        margin:5px;
+    }
+    .activities{
+        width: 925px;
+        height: 200px;
+        overflow: auto;
+    }
+</style>
+</html>
