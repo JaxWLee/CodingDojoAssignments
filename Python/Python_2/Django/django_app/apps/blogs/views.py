@@ -7,13 +7,13 @@ def new(request):
     response="placeholder to display a new form to create a new blog"
     return HttpResponse(response)
 def show(request,number):
-    response = "place holder to display blog number " + number
+    response = "placeholder to display blog number " + number
     return HttpResponse(response)
 def create(request):
-    return redirect('/') 
+    return redirect('/blogs') 
 def edit(request,number):
-    response = "place order to edit blog " + number
+    response = "placeholder to edit blog " + number
     return HttpResponse(response)
 def destroy(request):
-    return redirect("/")
+    return redirect("/blogs")
 # Create your views here.
