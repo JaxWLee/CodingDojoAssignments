@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Destroy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="confirm">
+            <h3>Are you sure you want to delete the following course?</h3>
+            <h5>Name: {{context.name}}</h5>
+            <h5>Description : {{context.desc.content}}</h5>
+            <form action="/{{context.id}}/process/">
+                {%csrf_token%}
+                <input type="submit" value="Delete">
+            </form>
+            <a href="/courses/">Go Back</a>
+        </div>
+    </div>
+</body>
+<style>
+    .wrapper{
+        width: 970px;
+        text-align: center;
+    }
+    .confirm{
+        margin:20px;
+        text-align: center;
+    }
+    h3{
+        margin:5px;
+    }
+    h5{
+        margin:10px;
+    }
+    a{
+        text-decoration: underline;
+    }
+</style>
+</html>

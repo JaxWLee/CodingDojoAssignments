@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Comments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="course">
+            <h3>{{context.name}}</h3>
+            <p>{{context.desc.content}}</p>
+        </div>
+        <div class="comments">
+            {%if comments%}
+                {%for i in comments%}
+                    <div class="comment">
+                        <h5>{{i.id}}</h5>
+                        <p>{{i.content}}</p>
+                    </div>
+                {%endfor%}
+            {%endif%}
+        </div>
+        </fieldset>
+        <form action="add_comment/" method="POST">
+            {% csrf_token %}
+            <h4>Add a comment:</h4>
+            <textarea name="new_comment" cols="60" rows="5"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+        <a href="/courses/">Go Back</a>
+    </div>
+</body>
+<style>
+    .wrapper{
+        width: 970px;
+    }
+    textarea{
+        resize: none;
+    }
+    fieldset{
+        border: 2px;
+    }
+    .course{
+        margin:5px;
+        border:2px solid black;
+    }
+    .course h3{
+        margin-left:10px;
+    }
+    .course p{
+        margin-left: 20px;
+    }
+    .comments{
+        width:600px;
+        margin-left:360px;
+    }
+    .comment{
+        border:2px solid black;
+        border-radius: 6px;
+        margin-bottom:5px;
+    }
+    .comment h5{
+        padding:3px;
+        border-bottom:solid black 2px;
+    }
+    .comment p{
+        margin-left:5px;
+    }
+    form{
+        margin:30px 10px 10px 360px;
+    }
+    input{
+        margin-left:540px;
+    }
+    a{
+        margin-left: 900px;
+        text-decoration: underline;
+    }
+</style>
+</html>
