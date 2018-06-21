@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>User {{context.id}}</h1>
+    <h4>First Name: {{context.first_name}}</h4>
+    <h4>Last Name: {{context.last_name}}</h4>
+    <h4>Email: {{context.email}}</h4>
+    <h4>Created At: {{context.created_at}}</h4>
+    <div class="links">
+        <a href="edit/">Edit</a>
+        <a href="destroy/">Delete</a>
+    </div>
+</body>
+<style>
+    h1{
+        margin:10px;
+    }
+    h4{
+        margin-left: 40px;
+    }
+    .links{
+        margin-left:200px;
+    }
+    a{
+        text-decoration: underline;
+    }
+</style>
+</html>

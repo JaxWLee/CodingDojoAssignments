@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Update</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Edit User: {{context.id}} </h1>
+    <form action="/update/" method="POST">
+        {% csrf_token %}
+        <h4>First Name: <input type="text" name='first_name' value = "{{context.first_name}}"></h4>
+        <h4>Last Name: <input type="text" name='last_name' value="{{context.last_name}}"></h4>
+        <h4 class = 'email'>Email: <input type="text" name='email' value="{{context.email}}"></h4>
+        <input class="submit" type="submit" value="Submit">
+    </form>
+</body>
+</html>

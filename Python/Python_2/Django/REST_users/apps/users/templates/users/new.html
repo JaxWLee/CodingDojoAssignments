@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>New User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+<h1>Add a New User</h1>
+<body>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li class = "text-danger">{{message}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form action="/users/create/" method="POST">
+        {% csrf_token %}
+        <h4>First Name: <input type="text" name='first_name'></h4>
+        <h4>Last Name: <input type="text" name='last_name'></h4>
+        <h4 class = 'email'>Email: <input type="text" name='email'></h4>
+        <input class="submit" type="submit" value="Submit">
+    </form>
+</body>
+<style>
+    h1 {
+        margin:5px;
+    }
+    .messages{
+        margin-left:30px;
+        font-size: 12pt;
+    }
+    form{
+        margin:15px;
+    }
+    h4{
+        margin:10px;
+    }
+    .email{
+        margin-left:65px;
+    }
+    .submit{
+        margin: 10px 10px 10px 350px;
+    }
+    .messages{
+        list-style-type: none;
+        margin-left:110px;
+    }
+</style>
+</html>
