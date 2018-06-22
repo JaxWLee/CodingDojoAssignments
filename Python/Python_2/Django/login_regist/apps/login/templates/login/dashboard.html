@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "login/style.css" %}">
+  </head>
+  <body>
+    <div class="dashboard">
+      <h1>Success!! Welcome, {{ context.first_name }}!</h1>
+      <p class = text-success>Successfully {{request.session.action}}</p>
+      <a href="/">Go Back</a>
+    </div>
+  </body>
+</html>

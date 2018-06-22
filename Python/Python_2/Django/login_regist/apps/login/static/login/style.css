@@ -1,0 +1,62 @@
+/* index.html styling with forms */
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.wrapper{
+  width:970px;
+  text-align: center;
+}
+.register{
+  margin:0px;
+}
+.register form{
+  margin:5px;
+}
+.register form h3{
+  margin:20px;
+}
+.register form .submit{
+  margin-left: 530px;
+  padding: 1px 3px 1px 3px;
+}
+.register form .email{
+  margin-left:177px;
+}
+.register form .password{
+  margin-left: 125px;
+}
+.register form .last_name{
+  margin-left: 110px;
+}
+.register form .first_name{
+  margin-left: 110px;
+}
+.login{
+  margin:10px;
+}
+.login form{
+  margin:15px;
+}
+.login form .email{
+  margin-left:170px;
+}
+.login form .password{
+  margin-left: 115px;
+}
+.login form h3{
+  margin:20px;
+}
+.login form .submit{
+  margin-left: 530px;
+  padding: 1px 3px 1px 3px;
+}
+
+.messages{
+  list-style-type: none;
+  margin-left: 100px;
+}
+.dashboard{
+  margin:10px;
+  text-align: center;
+}
