@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "books/style.css" %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Welcome {{ request.session.name }}</h1>
+            <div class="links" style="display: inline-block;">
+                <a href='books/add/'>Add a Book Review</a>
+                <a href='/logout/'>Log Out</a>
+            </div>
+        </div>
+        <br>
+        <div class="recent">
+            <h3>Recent Book Reviews:</h3>
+            {% for i in context.recent %}
+                <h3 style="margin-left: 15px;"><a href="/books/{{i.book.id}}">{{i.book.title}}</a></h3>
+                <p>Rating: {{i.rating}}/5</p>
+                <p><a href="/users/{{i.user.id}}/">{{i.user.name}}</a> said:  {{i.content}}</p>
+                {% if i == 3 %}
+                    exit
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="all">
+            <h3>Other Books with reviews</h3>
+            <fieldset name="all" style="border: solid 2px black;">
+                {% for i in context.all %}
+                    <a href="/books/{{i.id}}"style="margin:5px;">{{i.title}}</a><br>
+                {% endfor %}
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+.wrapper{
+    width: 1100px;
+}
+.register{
+    border: 2px black solid;
+    margin:10px;
+    display: inline-block;
+    width:560px;
+    padding-bottom:5px;
+}
+.register form{
+    margin-left: 20px;
+}
+.login{
+    margin-top:10px;
+    border: 2px black solid;
+    display: inline-block;
+    width:450px;
+    vertical-align: top;
+    padding-bottom:5px;
+}
+
+.login form{
+    margin-left: 10px;
+}
+.header h1{
+    display: inline;
+    margin-left:5px;
+}
+.header .links{
+    display: inline-block;
+    margin-left: 560px;
+}
+.header a{
+    text-decoration: underline;
+    margin:0px 5px 0px 5px;
+}
+textarea{
+    resize: none;
+}
+.add_body{
+    margin:20px;
+}
+.add_body form{
+    margin:10px;
+}
+.messages{
+    list-style-type: none;
+
+}
+.recent{
+    margin:10px;
+    width:400px;
+    display: inline-block;
+    vertical-align: top;
+}
+.recent p{
+    margin-left:25px;
+}
+.all{
+    display: inline-block;
+    width: 400px;
+    height: 600px;
+    overflow: scroll;
+    margin:10px 10px 10px 100px;
+}
+.book{
+    margin:10px;
+}
+.reviews{
+    margin:20px;
+    width:400px;
+    display: inline-block;
+    vertical-align: top;
+}
+.header2 .links{
+    display: inline-block;
+    margin-left: 840px;
+}
+.header2 a{
+    text-decoration: underline;
+    margin:0px 5px 0px 5px;
+}
+.add_review{
+    width:400px;
+    display: inline-block;
+    margin:20px 20px 20px 100px;
+}
+.header2 .links2{
+    display: inline-block;
+    margin-left: 920px;
+}

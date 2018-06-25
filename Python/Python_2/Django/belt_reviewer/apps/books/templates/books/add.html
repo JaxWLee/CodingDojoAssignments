@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Add Book Review</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "books/style.css" %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header2">
+            <div class="links">
+                <a href='books/add/'>Add a Book Review</a>
+                <a href='/logout/'>Log Out</a>
+            </div>
+        </div>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li class="text-danger">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <div class ="add_body">
+            <h1>Add a New Book Title and A Review</h1>
+            <form action="/process/" method="POST">
+                {%csrf_token%}
+                <input type="hidden" name='form' value="add">
+                <h3>Book Title: <input type="text" name='title'></h3>
+                <h3>Author:</h3>
+                <h5 style="display: inline-block;">Choose from the List:</h5> 
+                <select name="author">
+                    {% for i in context %} 
+                        <option value="{{i.id}}">{{i.name}}</option>
+                    {% endfor %} 
+                </select>
+                <h5>Or add a new author: <input type="text" name="add_author"></h5>
+                <h3>Review</h3>
+                <textarea name="review" id="" cols="50" rows="10"></textarea>
+                <br>
+                <h3 style="display: inline-block;">Rating:</h3>
+                <select name='rating'>
+                    <option value ='1'>1</option>
+                    <option value ='2'>2</option>
+                    <option value ='3'>3</option>
+                    <option value ='4'>4</option>
+                    <option value ='5'>5</option>
+                </select>
+                <br>
+                <input type="submit" value="Add Book and Review" style="margin-left: 400px;">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
